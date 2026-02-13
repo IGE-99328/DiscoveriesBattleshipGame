@@ -46,3 +46,12 @@ Afundar todos os navios do adversário antes que ele afunde os teus.
 O jogo termina quando todos os navios de um jogador forem afundados.  
 O outro jogador é o vencedor.
 
+## Correspondencia entre navius da batalha naval e descobrimentos
+
+| Batalha Naval      | Descobrimentos | English | Dimensão | #Navios |
+| ------------------ | -------------- | ------- | -------- | ------- |
+| Porta-aviões       | Galeão         | Galleon | 5        | 1       |
+| Navio de 4 canhões | Fragata        | Frigate | 4        | 1       |
+| Navio de 3 canhões | Nau            | Carrack | 3        | 2       |
+| Navio de 2 canhões | Caravela       | Caravel | 2        | 3       |
+| Submarino          | Barca          | Barge   | 1        | 4       |
