@@ -58,11 +58,11 @@ O outro jogador é o vencedor.
 
 ## Referência sobre os navios
 
-Galeão: https://pt.wikipedia.org/wiki/Gale%C3%A3o
-Fragata: https://pt.wikipedia.org/wiki/Fragata
-Nau: https://pt.wikipedia.org/wiki/Nau
-Caravela: https://pt.wikipedia.org/wiki/Caravela
-Barca: https://pt.wikipedia.org/wiki/Barca
+|Galeão: https://pt.wikipedia.org/wiki/Gale%C3%A3o
+|Fragata: https://pt.wikipedia.org/wiki/Fragata
+|Nau: https://pt.wikipedia.org/wiki/Nau
+|Caravela: https://pt.wikipedia.org/wiki/Caravela
+|Barca: https://pt.wikipedia.org/wiki/Barca
 
 ## Imagens
 ![Caravela](https://upload.wikimedia.org/wikipedia/commons/3/3c/Portuguese_caravel.jpg)
