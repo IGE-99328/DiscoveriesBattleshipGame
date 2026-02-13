@@ -63,3 +63,11 @@ Fragata: https://pt.wikipedia.org/wiki/Fragata
 Nau: https://pt.wikipedia.org/wiki/Nau
 Caravela: https://pt.wikipedia.org/wiki/Caravela
 Barca: https://pt.wikipedia.org/wiki/Barca
+
+## Imagens
+![Caravela](https://upload.wikimedia.org/wikipedia/commons/3/3c/Portuguese_caravel.jpg)
+![Galeão](https://pt.wikipedia.org/wiki/Ficheiro:Gale%C3%B3n_Andaluc%C3%ADa_Quebec_City_02.jpg)
+![Fragata](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Lebreton_engraving-26.jpg/330px-Lebreton_engraving-26.jpg)
+![Nau](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Santa-Maria.jpg/250px-Santa-Maria.jpg)
+![Barca](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Rozenburgsesluis_juli_2007.jpg/250px-Rozenburgsesluis_juli_2007.jpg)
+
