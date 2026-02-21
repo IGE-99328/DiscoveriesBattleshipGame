@@ -71,3 +71,6 @@ Barca: https://pt.wikipedia.org/wiki/Barca
 ![Nau](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Santa-Maria.jpg/250px-Santa-Maria.jpg)
 ![Barca](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Rozenburgsesluis_juli_2007.jpg/250px-Rozenburgsesluis_juli_2007.jpg)
 
+## Resposta a D7
+Ao observarmos o garfo, conseguimos concluir que cada membro criou o seu branch, efetuou alterações ao README, abriu um pull request e este foi depois integrado na branch main através de um merge commit.Tambem é possível observar que cada branch representa commits próprios correspondetes às alterações realizadas. Alem disso, no ramo azul obeserva-se que houve uma atualização intermédia com a main antes do merge final, o que significa que o ramo foi sincronizado para evitar conflitos e integrar as alterações mais recentes. 
+
