@@ -5,6 +5,16 @@ package iscteiul.ista.battleship;
 
 import java.util.Objects;
 
+/**
+ * Representa uma posição (célula) da grelha do jogo Batalha Naval.
+ * 
+ * Cada posição é identificada por uma linha e uma coluna.
+ * Uma posição pode estar ocupada por parte de um navio
+ * e pode ter sido atingida por um tiro durante o jogo.
+ * 
+ * Esta classe implementa a interface IPosition.
+ */
+
 public class Position implements IPosition {
     private int row;
     private int column;
@@ -12,7 +22,12 @@ public class Position implements IPosition {
     private boolean isHit;
 
     /**
+     * Constrói uma nova posição com a linha e coluna indicadas.
      *
+     * A posição inicialmente não esta ocupada nem foi atingida.
+     *
+     *@param row número da linha
+     *@param column número da coluna
      */
     public Position(int row, int column) {
         this.row = row;
@@ -21,36 +36,47 @@ public class Position implements IPosition {
         this.isHit = false;
     }
 
-    /*
-     * (non-Javadoc)
+    /**
+     * Devolve o número da linha da posição
      *
-     * @see battleship.IPosition#getRow()
+     *@return número da linha
      */
     @Override
     public int getRow() {
         return row;
     }
 
-    /*
-     * (non-Javadoc)
+    /**
+     * Devolve o número da coluna da posição
      *
-     * @see battleship.IPosition#getColumn()
+     *@return número da coluna
      */
     @Override
     public int getColumn() {
         return column;
     }
 
-
+    /**
+     * Gera o código hash da posição.
+     * 
+     * O hash é baseado apenas na linha e coluna,
+     * garantindo consistência com o método equals().
+     *
+     * @return valor do código hash
+     */
     @Override
     public int hashCode() {
         return Objects.hash(column, isHit, isOccupied, row);
     }
 
-    /*
-     * (non-Javadoc)
+    /**
+     * Verifica se esta posição é igual a posição de outro objeto.
+     * 
+     * Duas posições são consideradas iguais se tiverem
+     * a mesma linha e a mesma coluna.
      *
-     * @see battleship.IPosition#equals(java.lang.Object)
+     * @param otherPosition objeto a comparar
+     * @return true se as posições tiverem as mesmas coordenadas; false caso contrário
      */
     @Override
     public boolean equals(Object otherPosition) {
@@ -64,56 +90,58 @@ public class Position implements IPosition {
         }
     }
 
-    /*
-     * (non-Javadoc)
+    /**
+     * Verifica se esta posição é adjacente a outra.
      *
-     * @see battleship.IPosition#isAdjacentTo(battleship.IPosition)
+     * @param other posição a comparar
+     * @return true se for adjacente; false caso contrário
      */
     @Override
     public boolean isAdjacentTo(IPosition other) {
         return (Math.abs(this.getRow() - other.getRow()) <= 1 && Math.abs(this.getColumn() - other.getColumn()) <= 1);
     }
 
-    /*
-     * (non-Javadoc)
-     *
-     * @see battleship.IPosition#occupy()
+    /**
+     * Marca esta posição como ocupada por um navio.
      */
     @Override
     public void occupy() {
         isOccupied = true;
     }
-
-    /*
-     * (non-Javadoc)
-     *
-     * @see battleship.IPosition#shoot()
+     
+    /**
+     * Marca esta posição como atingida por um tiro.
      */
     @Override
     public void shoot() {
         isHit = true;
     }
 
-    /*
-     * (non-Javadoc)
+    /**
+     * Indica se a posição está ocupada.
      *
-     * @see battleship.IPosition#isOccupied()
+     * @return true se estiver ocupada; false caso contrário
      */
     @Override
     public boolean isOccupied() {
         return isOccupied;
     }
 
-    /*
-     * (non-Javadoc)
+    /**
+     * Indica se a posição já foi atingida.
      *
-     * @see battleship.IPosition#isHit()
+     * @return true se já tiver sido atingida; false caso contrário
      */
     @Override
     public boolean isHit() {
         return isHit;
     }
 
+    /**
+     * Devolve uma representação textual da posição.
+     *
+     * @return texto com a linha e coluna da posição
+     */
     @Override
     public String toString() {
         return ("Linha = " + row + " Coluna = " + column);
