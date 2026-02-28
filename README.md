@@ -77,3 +77,15 @@ Barca: https://pt.wikipedia.org/wiki/Barca
 Ao observarmos o garfo, conseguimos concluir que cada membro criou o seu branch, efetuou alterações ao README, abriu um pull request e este foi depois integrado na branch main através de um merge commit.Tambem é possível observar que cada branch representa commits próprios correspondetes às alterações realizadas. Alem disso, no ramo azul obeserva-se que houve uma atualização intermédia com a main antes do merge final, o que significa que o ramo foi sincronizado para evitar conflitos e integrar as alterações mais recentes. 
 
 Simulação de conflito
+
+## Documentação do conflito simulado
+Simulamos um conflito no ficheiro README alterando a linha 79.
+1. O usuario do branch "conflitotest" e do branch "teste-branch" editaram a linha 79 e depois fizeram commit e push e também pull request.
+2. Ao fazer merge do branch "teste-branch" deu certo, mas o merge do branch "conflitotest" o Git sinalizou conflito:
+   <<<<<<< HEAD
+   Teste de conflitos em grupo
+   =======
+   Simulação de conflito
+   ">>>>>>> 
+3. Optamos pela alteração "Simulação de conflito" e depois o merge foi bem sucedido.
+
