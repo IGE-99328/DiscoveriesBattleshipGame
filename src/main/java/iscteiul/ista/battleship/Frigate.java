@@ -1,7 +1,7 @@
 package iscteiul.ista.battleship;
 
 /**
- * Classe que representa uma Frigate (Fragata) no jogo Battleship.
+ * Classe que representa uma Frigate no jogo Battleship.
  * <p>
  * A Fragata é um navio de tamanho 4, ocupando quatro posições
  * consecutivas no tabuleiro. A disposição das posições depende
