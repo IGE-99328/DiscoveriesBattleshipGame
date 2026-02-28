@@ -147,7 +147,6 @@ public class Fleet implements IFleet {
         printShipsByCategory("Caravela");
         printShipsByCategory("Barca");
     }
-
     /**
      * Imprime todos os navios de uma determinada categoria.
      *
@@ -157,7 +156,6 @@ public class Fleet implements IFleet {
         assert category != null;
         printShips(getShipsLike(category));
     }
-
     /**
      * Imprime todos os navios da frota que ainda não foram atingidos totalmente.
      */
