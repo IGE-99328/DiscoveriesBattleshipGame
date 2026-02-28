@@ -8,6 +8,7 @@ jobs:
   comentar:
     runs-on: ubuntu-latest
     
+    # Esta é a parte crucial que estava a faltar (Permissões de Escrita)
     permissions:
       pull-requests: write
       issues: write
@@ -18,9 +19,10 @@ jobs:
         uses: peter-evans/create-or-update-comment@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          # Deteta automaticamente o número do PR atual
           issue-number: ${{ github.event.pull_request.number }}
           body: |
-            👋 Olá @IGE-99845 @IGE-122479 @IGE-113190, um novo Pull Request foi criado/atualizado!
+            👋 Olá @IGE-99328 @IGE-99845 @IGE-122479 @IGE-113190, um novo Pull Request foi criado/atualizado!
             Por favor, revisa quando possível.
           edit-mode: append
           append-separator: newline
