@@ -1,3 +1,5 @@
+package iscteiul.ista.battleship;
+
 /**
  * Classe que representa uma Barge no jogo Battleship.
  * <p>
@@ -5,14 +7,12 @@
  * no tabuleiro (tamanho 1). A sua posição é definida pela coordenada
  * superior esquerda fornecida no momento da criação.
  * </p>
- * 
+ *
  * <p>
  * Apesar de receber uma orientação (bearing), esta não influencia
  * o posicionamento do navio, pois a Barge ocupa apenas uma célula.
  * </p>
  */
-package iscteiul.ista.battleship;
-
 public class Barge extends Ship {
     
      /** 
@@ -43,6 +43,11 @@ public class Barge extends Ship {
         getPositions().add(new Position(pos.getRow(), pos.getColumn()));
     }
 
+    /**
+     * Retorna o tamanho da Barge.
+     *
+     * @return o valor 1, correspondente ao número de posições ocupadas
+     */
     @Override
     public Integer getSize() {
         return SIZE;
