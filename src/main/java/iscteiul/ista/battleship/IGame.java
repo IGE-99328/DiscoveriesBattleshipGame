@@ -1,3 +1,6 @@
+package iscteiul.ista.battleship;
+import java.util.List;
+
 /**
  * Interface que define as operações básicas de um jogo de Battleship.
  * <p>
@@ -6,10 +9,6 @@
  * sobre os tiros válidos e a frota.
  * </p>
  */
-package iscteiul.ista.battleship;
-
-import java.util.List;
-
 public interface IGame {
 
     /**
@@ -46,13 +45,34 @@ public interface IGame {
      */
     int getInvalidShots();
 
+    /**
+     * Retorna o número de tiros que acertaram em algum navio.
+     *
+     * @return número de acertos
+     */
     int getHits();
 
+    /**
+     * Retorna o número de navios que foram completamente afundados.
+     *
+     * @return número de navios afundados
+     */
     int getSunkShips();
 
+    /**
+     * Retorna o número de navios ainda não afundados no jogo.
+     *
+     * @return número de navios restantes
+     */
     int getRemainingShips();
 
+    /**
+     * Imprime no console a lista de tiros válidos efetuados até o momento.
+     */
     void printValidShots();
 
+    /**
+     * Imprime no console o estado atual da frota de navios.
+     */
     void printFleet();
 }

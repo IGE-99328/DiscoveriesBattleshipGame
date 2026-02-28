@@ -1,3 +1,5 @@
+package iscteiul.ista.battleship;
+
 /**
  * Classe que representa uma Frigate (Fragata) no jogo Battleship.
  * <p>
@@ -13,8 +15,6 @@
  *
  * Caso a orientação seja inválida, é lançada uma exceção.
  */
-package iscteiul.ista.battleship;
-
 public class Frigate extends Ship {
 
      /**
@@ -29,8 +29,22 @@ public class Frigate extends Ship {
     private static final String NAME = "Fragata";
 
     /**
-     * @param bearing
-     * @param pos
+     * Construtor da Fragata.
+     * <p>
+     * Inicializa a fragata com a orientação e posição inicial indicadas.
+     * A partir da posição inicial, as restantes posições são calculadas
+     * de acordo com o bearing:
+     * </p>
+     *
+     * <ul>
+     *   <li>Vertical (NORTH, SOUTH) → incrementa a linha</li>
+     *   <li>Horizontal (EAST, WEST) → incrementa a coluna</li>
+     * </ul>
+     *
+     * @param bearing orientação da fragata
+     * @param pos     posição inicial (canto superior/esquerdo) da fragata
+     *
+     * @throws IllegalArgumentException se o bearing for inválido
      */
     public Frigate(Compass bearing, IPosition pos) throws IllegalArgumentException {
         super(Frigate.NAME, bearing, pos);
@@ -50,10 +64,10 @@ public class Frigate extends Ship {
         }
     }
 
-    /*
-     * (non-Javadoc)
+    /**
+     * Retorna o tamanho da Fragata.
      *
-     * @see battleship.Ship#getSize()
+     * @return o valor 4, correspondente ao número de posições ocupadas
      */
     @Override
     public Integer getSize() {
