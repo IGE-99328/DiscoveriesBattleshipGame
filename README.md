@@ -82,10 +82,10 @@ Simulação de conflito
 Simulamos um conflito no ficheiro README alterando a linha 79.
 1. O usuario do branch "conflitotest" e do branch "teste-branch" editaram a linha 79 e depois fizeram commit e push e também pull request.
 2. Ao fazer merge do branch "teste-branch" deu certo, mas o merge do branch "conflitotest" o Git sinalizou conflito:
-   <<<<<<< HEAD
+   "<<<<<<< HEAD
    Teste de conflitos em grupo
-   =======
+   "=======
    Simulação de conflito
    ">>>>>>> 
-3. Optamos pela alteração "Simulação de conflito" e depois o merge foi bem sucedido.
+4. Optamos pela alteração "Simulação de conflito" e depois o merge foi bem sucedido.
 
