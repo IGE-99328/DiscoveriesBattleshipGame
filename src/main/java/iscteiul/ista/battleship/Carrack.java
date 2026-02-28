@@ -33,7 +33,6 @@ public class Carrack extends Ship {
                 for (int r = 0; r < SIZE; r++)
                     getPositions().add(new Position(pos.getRow() + r, pos.getColumn()));
                 break;
-
             case EAST:
             case WEST:
                 // Colocação horizontal: incrementa a coluna
@@ -45,7 +44,6 @@ public class Carrack extends Ship {
                 throw new IllegalArgumentException("ERROR! invalid bearing for the carrack");
         }
     }
-
     /**
      * Devolve o tamanho da Nau.
      *
