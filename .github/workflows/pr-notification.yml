@@ -1,21 +1,26 @@
-name: PR Notification
+name: Notificar Revisores no PR
 
 on:
   pull_request:
-    types: [opened, reopened, edited, synchronize]
+    types: [opened, synchronize, reopened]
 
 jobs:
-  notify:
+  comentar:
     runs-on: ubuntu-latest
+    
+    permissions:
+      pull-requests: write
+      issues: write
+      contents: read
+
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
-    - name: Notify PR reviewer
-      uses: peter-evans/create-or-update-comment@v4
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        issue-number: ${{ github.event.pull_request.number }}
-        body: |
-          👋 Olá @IGE-99845 @IGE-122479 @IGE-113190, um novo Pull Request foi criado/atualizado!
-          Por favor, revisa quando possível. 
-        
+      - name: Criar ou atualizar comentário
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            👋 Olá @IGE-99328 @IGE-99845 @IGE-122479 @IGE-113190, um novo Pull Request foi criado/atualizado!
+            Por favor, revisa quando possível.
+          edit-mode: append
+          append-separator: newline
