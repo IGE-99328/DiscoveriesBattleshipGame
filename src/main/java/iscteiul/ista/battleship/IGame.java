@@ -1,3 +1,16 @@
+/**
+ * Interface que define o motor de jogo (Game Engine) da Batalha Naval.
+ * <p>
+ * O {@code IGame} é responsável por processar os disparos, validar a legalidade
+ * das jogadas e manter as estatísticas de combate (tiros repetidos, falhados,
+ * navios afundados, etc.).
+ * </p>
+ *
+ *
+ * @author IGE-122479
+ *
+ * @version 1.0
+ */
 package iscteiul.ista.battleship;
 import java.util.List;
 
@@ -12,67 +25,67 @@ import java.util.List;
 public interface IGame {
 
     /**
-     * Dispara contra uma posição no tabuleiro.
+     * Executa um disparo numa coordenada específica do tabuleiro.
      * <p>
-     * Retorna o navio atingido, caso haja um, ou {@code null} se o tiro
-     * não atingir nenhum navio.
+     * O método deve verificar se a posição é válida, se já foi atingida e,
+     * em caso de acerto, identificar qual o navio atingido.
      * </p>
      *
-     * @param pos posição alvo do tiro
-     * @return o navio atingido ou {@code null} se não houver impacto
+     * @param pos A coordenada {@link IPosition} onde o tiro é desferido.
+     * @return O objeto {@link IShip} que foi atingido, ou {@code null} se o tiro for na água.
      */
     IShip fire(IPosition pos);
-    
+
     /**
-     * Retorna a lista de todas as posições já alvo de tiros.
-     *
-     * @return lista de posições de tiros efetuados
+     * Retorna a lista de todas as coordenadas onde já foram efectuados disparos.
+     * * @return Uma {@link List} com todas as {@link IPosition} visadas.
      */
     List<IPosition> getShots();
-    
+
     /**
-     * Retorna o número de tiros repetidos, ou seja, disparos em posições
-     * já atingidas anteriormente.
-     *
-     * @return número de tiros repetidos
+     * Obtém o contador de tiros efectuados em coordenadas que já tinham sido
+     * alvo de disparos anteriormente.
+     * * @return O número de tiros repetidos.
      */
     int getRepeatedShots();
-    
-     /**
-     * Retorna o número de tiros inválidos, como aqueles fora do tabuleiro.
-     *
-     * @return número de tiros inválidos
+
+    /**
+     * Obtém o contador de tiros efectuados fora dos limites do tabuleiro
+     * (ex: coordenadas negativas ou superiores ao tamanho da grelha).
+     * * @return O número de tiros inválidos.
      */
     int getInvalidShots();
 
     /**
-     * Retorna o número de tiros que acertaram em algum navio.
-     *
-     * @return número de acertos
+     * Obtém o número total de tiros que atingiram com sucesso um navio.
+     * * @return O número de acertos (hits).
      */
     int getHits();
 
     /**
-     * Retorna o número de navios que foram completamente afundados.
-     *
-     * @return número de navios afundados
+     * Obtém o número de navios da frota adversária que já foram totalmente destruídos.
+     * * @return O número de navios afundados.
      */
     int getSunkShips();
 
     /**
-     * Retorna o número de navios ainda não afundados no jogo.
-     *
-     * @return número de navios restantes
+     * Obtém o número de navios que ainda possuem pelo menos uma parte intacta.
+     * * @return O número de navios restantes na frota.
      */
     int getRemainingShips();
 
     /**
-     * Imprime no console a lista de tiros válidos efetuados até o momento.
+     * Apresenta na consola (ou log) a lista de todos os tiros válidos efectuados
+     * até ao momento, permitindo ao jogador acompanhar o histórico.
      */
     void printValidShots();
 
     /**
-     * Imprime no console o estado atual da frota de navios.
+     * Exibe o estado atual de todos os navios da frota.
+     * <p>
+     * Geralmente utilizado para depuração (debug) ou quando o jogador
+     * usa o comando de "batota" (mapa).
+     * </p>
      */
     void printFleet();
 }
