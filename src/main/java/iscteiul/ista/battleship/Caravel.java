@@ -1,7 +1,7 @@
 package iscteiul.ista.battleship;
 
 /**
- * Classe que representa uma Caravel (Caravela) no jogo Battleship.
+ * Classe que representa uma Caravel no jogo Battleship.
  * <p>
  * A Caravela é um navio de tamanho 2, ocupando duas posições consecutivas
  * no tabuleiro. A sua disposição depende da orientação (bearing) fornecida
