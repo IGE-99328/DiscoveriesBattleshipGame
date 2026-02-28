@@ -1,10 +1,31 @@
 /**
+ * Classe que representa uma Caravel (Caravela) no jogo Battleship.
+ * <p>
+ * A Caravela é um navio de tamanho 2, ocupando duas posições consecutivas
+ * no tabuleiro. A sua disposição depende da orientação (bearing) fornecida
+ * no momento da criação.
+ * </p>
  *
+ * <ul>
+ *   <li>NORTH ou SOUTH → ocupa duas posições na vertical</li>
+ *   <li>EAST ou WEST → ocupa duas posições na horizontal</li>
+ * </ul>
+ *
+ * Caso a orientação seja inválida ou nula, é lançada uma exceção.
  */
 package iscteiul.ista.battleship;
 
 public class Caravel extends Ship {
+
+    /**
+     * Tamanho fixo da Caravela.
+     * Ocupa exatamente 2 posições no tabuleiro.
+     */
     private static final Integer SIZE = 2;
+
+    /**
+     * Nome identificador do navio.
+     */
     private static final String NAME = "Caravela";
 
     /**
