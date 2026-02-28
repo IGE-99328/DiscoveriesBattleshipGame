@@ -1,10 +1,31 @@
 /**
+ * Classe que representa uma Frigate (Fragata) no jogo Battleship.
+ * <p>
+ * A Fragata é um navio de tamanho 4, ocupando quatro posições
+ * consecutivas no tabuleiro. A disposição das posições depende
+ * da orientação (bearing) fornecida no momento da sua criação.
+ * </p>
  *
+ * <ul>
+ *   <li>NORTH ou SOUTH → ocupa quatro posições na vertical</li>
+ *   <li>EAST ou WEST → ocupa quatro posições na horizontal</li>
+ * </ul>
+ *
+ * Caso a orientação seja inválida, é lançada uma exceção.
  */
 package iscteiul.ista.battleship;
 
 public class Frigate extends Ship {
+
+     /**
+     * Tamanho fixo da Fragata.
+     * Ocupa exatamente 4 posições no tabuleiro.
+     */
     private static final Integer SIZE = 4;
+
+    /**
+     * Nome identificador do navio.
+     */
     private static final String NAME = "Fragata";
 
     /**
