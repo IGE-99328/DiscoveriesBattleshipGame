@@ -7,6 +7,7 @@
  * de um {@link Logger}.
  * </p>
  * * @author IGE-122479
+ *
  * @version 1.0
  */
 package iscteiul.ista.battleship;

@@ -8,13 +8,14 @@
  * *
  *
  * @author IGE-122479
+ *
  * @version 1.0
  */
 package iscteiul.ista.battleship;
 
 import java.util.List;
 
-public interface IShip {
+public interface  IShip {
 
     /**
      * Obtém a categoria ou nome do navio (ex: "Caravela", "Fragata").
