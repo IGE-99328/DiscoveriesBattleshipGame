@@ -10,7 +10,6 @@ import java.util.List;
  * necessárias para gerir os navios e consultar o seu estado.
  */
 public interface IFleet {
-
     /** Dimensão do tabuleiro (número de linhas/colunas). */
     Integer BOARD_SIZE = 10;
 
@@ -56,7 +55,6 @@ public interface IFleet {
      * @return navio nessa posição ou {@code null} se não existir
      */
     IShip shipAt(IPosition pos);
-
     /**
      * Mostra no ecrã o estado da frota.
      * A forma de apresentação fica ao critério da implementação.

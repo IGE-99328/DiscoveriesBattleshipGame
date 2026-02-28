@@ -14,7 +14,6 @@ package iscteiul.ista.battleship;
  * </ul>
  */
 public enum Compass {
-
     /** Direção Norte. */
     NORTH('n'),
 
@@ -50,7 +49,6 @@ public enum Compass {
     public char getDirection() {
         return c;
     }
-
     /**
      * Devolve a representação textual da direção
      * (o próprio carácter associado).
