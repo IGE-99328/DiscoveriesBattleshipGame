@@ -1,0 +1,21 @@
+name: PR Notification
+
+on:
+  pull_request:
+    types: [opened, reopened, edited, synchronize]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+    - name: Notify PR reviewer
+      uses: peter-evans/create-or-update-comment@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        issue-number: ${{ github.event.pull_request.number }}
+        body: |
+          👋 Olá @username-do-colega, um novo Pull Request foi criado/atualizado!
+          Por favor, revisa quando possível. 
+        
