@@ -2,13 +2,10 @@
  *
  */
 package iscteiul.ista.battleship;
-
 /**
  * Representa um navio do tipo Galeão.
- * 
  * O Galeão é um navio com tamanho fixo de 5 posições.
  * A sua forma varia consoante a orientação (NORTH, SOUTH, EAST, WEST).
- * 
  * Esta classe estende a classe abstrata Ship.
  */
 
@@ -18,12 +15,10 @@ public class Galleon extends Ship {
 
     /**
      * Constrói um Galeão com a orientação e posição inicial indicadas.
-     * 
      * Consoante a orientação, as posições ocupadas
      * pelo navio são calculadas e adicionadas à lista de posições.
-     *
-     * @param bearing
-     * @param pos
+     * @param bearing orientação
+     * @param pos posição inicial do navio
      * @throws NullPointerException se a orientação for null
      * @throws IllegalArgumentException se a orientação for inválida
      */
@@ -54,7 +49,6 @@ public class Galleon extends Ship {
 
     /**
      * Devolve o tamanho do Galeão.
-     *
      * @return número de posições ocupadas: 5
      */
     @Override
@@ -64,7 +58,6 @@ public class Galleon extends Ship {
 
     /**
      * Define as posições ocupadas pelo Galeão quando orientado a Norte.
-     *
      * @param pos posição inicial
      */
     private void fillNorth(IPosition pos) {
@@ -77,7 +70,6 @@ public class Galleon extends Ship {
 
     /**
      * Define as posições ocupadas pelo Galeão quando orientado a Sul.
-     *
      * @param pos posição inicial
      */
     private void fillSouth(IPosition pos) {
@@ -91,7 +83,6 @@ public class Galleon extends Ship {
 
     /**
      * Define as posições ocupadas pelo Galeão quando orientado a Este.
-     *
      * @param pos posição inicial
      */
     private void fillEast(IPosition pos) {
@@ -104,7 +95,6 @@ public class Galleon extends Ship {
 
     /**
      * Define as posições ocupadas pelo Galeão quando orientado a Oeste.
-     *
      * @param pos posição inicial
      */
     private void fillWest(IPosition pos) {

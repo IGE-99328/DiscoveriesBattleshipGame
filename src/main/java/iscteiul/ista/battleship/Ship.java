@@ -9,12 +9,9 @@ import java.util.List;
 
 /**
  * Representa um navio do jogo Batalha Naval.
- * 
  * Um navio possui um tipo, uma orientação e uma posição inicial
- * 
  * Esta classe é abstrata e serve de base para os diferentes tipos
  * de navios concretos
- * 
  * Implementa a interface IShip.
  */
 
@@ -81,9 +78,8 @@ public abstract class Ship implements IShip {
         positions = new ArrayList<>();
     }
 
-    /*
+    /**
      * Devolve a categoria do navio
-     *
      * @return categoria
      */
     @Override
@@ -99,9 +95,8 @@ public abstract class Ship implements IShip {
         return positions;
     }
 
-    /*
+    /**
      * Devolve a posição inicial do navio.
-     *
      * @return posição inicial
      */
     @Override
@@ -109,9 +104,8 @@ public abstract class Ship implements IShip {
         return pos;
     }
 
-    /*
+    /**
      * Devolve a orientação do navio.
-     *
      * @return orientação
      */
     @Override
@@ -119,12 +113,10 @@ public abstract class Ship implements IShip {
         return bearing;
     }
 
-    /*
+    /**
      * Indica se o navio ainda está a flutuar.
-     * 
      * Um navio continua a flutuar enquanto existir pelo menos
      * uma posição que ainda não tenha sido atingida.
-     *
      * @return true se ainda estiver a flutuar; false se estiver afundado
      */
     @Override
@@ -135,9 +127,8 @@ public abstract class Ship implements IShip {
         return false;
     }
 
-    /*
+    /**
      * Devolve a linha mais superior ocupada pelo navio.
-     *
      * @return número da linha superior
      */
     @Override
@@ -149,9 +140,8 @@ public abstract class Ship implements IShip {
         return top;
     }
 
-    /*
+    /**
      * Devolve a linha mais inferior ocupada pelo navio.
-     *
      * @return número da linha inferior
      */
     @Override
@@ -163,9 +153,8 @@ public abstract class Ship implements IShip {
         return bottom;
     }
 
-    /*
+    /**
      * Devolve a coluna mais à esquerda ocupada pelo navio.
-     *
      * @return número da coluna mais à esquerda
      */
     @Override
@@ -177,9 +166,8 @@ public abstract class Ship implements IShip {
         return left;
     }
 
-    /*
+    /**
      * Devolve a coluna mais à direita ocupada pelo navio.
-     *
      * @return número da coluna mais à direita
      */
     @Override
@@ -191,9 +179,8 @@ public abstract class Ship implements IShip {
         return right;
     }
 
-    /*
+    /**
      * Verifica se o navio ocupa uma determinada posição.
-     *
      * @param pos posição a verificar
      * @return true se o navio ocupar essa posição; false caso contrário
      */
@@ -207,9 +194,8 @@ public abstract class Ship implements IShip {
         return false;
     }
 
-    /*
+    /**
      * Verifica se este navio está demasiado próximo de outro navio.
-     *
      * @param other outro navio
      * @return true se estiver demasiado próximo; false caso contrário
      */
@@ -225,9 +211,8 @@ public abstract class Ship implements IShip {
         return false;
     }
 
-    /*
+    /**
      * Verifica se este navio está demasiado próximo de uma posição.
-     *
      * @param pos posição a verificar
      * @return true se estiver adjacente; false caso contrário
      */
@@ -240,9 +225,8 @@ public abstract class Ship implements IShip {
     }
 
 
-    /*
+    /**
      * Regista um tiro numa determinada posição.
-     *
      * @param pos posição atingida
      */
     @Override
@@ -257,7 +241,6 @@ public abstract class Ship implements IShip {
 
     /**
      * Devolve uma representação textual do navio.
-     *
      * @return texto com categoria, orientação e posição inicial
      */
     @Override
