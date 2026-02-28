@@ -16,6 +16,6 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }}
         issue-number: ${{ github.event.pull_request.number }}
         body: |
-          👋 Olá @, um novo Pull Request foi criado/atualizado!
+          👋 Olá @IGE-99845|@IGE-122479|@IGE-113190, um novo Pull Request foi criado/atualizado!
           Por favor, revisa quando possível. 
         
