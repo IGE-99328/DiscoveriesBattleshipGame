@@ -12,9 +12,16 @@
  * @version 1.0
  */
 package iscteiul.ista.battleship;
-
 import java.util.List;
 
+/**
+ * Interface que define as operações básicas de um jogo de Battleship.
+ * <p>
+ * Fornece métodos para disparar contra posições do tabuleiro, consultar
+ * estatísticas de tiros e estados dos navios, e imprimir informações
+ * sobre os tiros válidos e a frota.
+ * </p>
+ */
 public interface IGame {
 
     /**

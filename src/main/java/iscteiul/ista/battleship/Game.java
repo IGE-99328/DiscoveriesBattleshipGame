@@ -7,16 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author fba
- *
- */
-
-/**
  * Representa o jogo da Batalha Naval.
- * 
  * A classe Game é responsável por gerir os tiros efetuados, validar os tiros,
  * contabilizar as estatísticas do jogo e interagir com a frota.
- * 
  * Implementa a interface IGame.
  */
 public class Game implements IGame {
@@ -42,10 +35,8 @@ public class Game implements IGame {
 
     /**
      * Efetua um tiro numa determinada posição.
-     * 
      * O método verifica se o tiro é valido, verifica se é repetido, regista o tiro,
      * atualiza estatísticas e verifica se um navio foi atingido ou afundado.
-     *
      * @param pos posição onde disparar
      * @return o navio afundado, caso exista; null caso contrário
      */
@@ -74,7 +65,6 @@ public class Game implements IGame {
 
     /**
      * Devolve a lista de tiros válidos efetuados.
-     *
      * @return lista de posições disparadas
      */
     @Override
@@ -84,7 +74,6 @@ public class Game implements IGame {
 
     /**
      * Devolve o número de tiros repetidos.
-     *
      * @return número de tiros repetidos
      */
     @Override
@@ -94,7 +83,6 @@ public class Game implements IGame {
 
     /**
      * Devolve o número de tiros inválidos.
-     *
      * @return número de tiros inválidos
      */
     @Override
@@ -104,7 +92,6 @@ public class Game implements IGame {
 
     /**
      * Devolve o número de tiros que atingiram navios.
-     *
      * @return número de acertos
      */
     @Override
@@ -114,7 +101,6 @@ public class Game implements IGame {
 
     /**
      * Devolve o número de navios afundados.
-     *
      * @return número de navios afundados
      */
     @Override
@@ -122,9 +108,8 @@ public class Game implements IGame {
         return this.countSinks;
     }
 
-    /*
+    /**
      * Devolve o número de navios ainda a flutuar.
-     *
      * @return número de navios restantes
      */
     @Override
@@ -135,7 +120,6 @@ public class Game implements IGame {
     
     /**
      * Verifica se um tiro é válido (está dentro dos limites do tabuleiro).
-     *
      * @param pos posição do tiro
      * @return true se for válido; false caso contrário
      */
@@ -146,7 +130,6 @@ public class Game implements IGame {
     
     /**
      * Verifica se um tiro já foi anteriormente efetuado.
-     *
      * @param pos posição do tiro
      * @return true se já tiver sido disparado; false caso contrário
      */
@@ -160,7 +143,6 @@ public class Game implements IGame {
     /**
      * Imprime o tabuleiro com um marcador específico
      * nas posições indicadas.
-     *
      * @param positions lista de posições a marcar
      * @param marker carácter a utilizar como marcador
      */
@@ -184,7 +166,7 @@ public class Game implements IGame {
 
 
     /**
-     * Prints the board showing valid shots that have been fired
+     * Imprime os tiros validos
      */
     public void printValidShots() {
         printBoard(getShots(), 'X');
@@ -192,7 +174,7 @@ public class Game implements IGame {
 
 
     /**
-     * Prints the board showing the fleet
+     * Imprime o tabuleiro com a frota
      */
     public void printFleet() {
         List<IPosition> shipPositions = new ArrayList<IPosition>();
