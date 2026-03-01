@@ -87,5 +87,5 @@ public enum Compass {
         return bearing;
     }
 
-    /** estou só a praticar comandos*/
+    /** estou só a praticar comandos do git e github*/
 }
