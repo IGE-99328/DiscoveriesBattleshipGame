@@ -1,3 +1,5 @@
+package iscteiul.ista.battleship;
+
 /**
  * Interface que define o contrato para uma posição (célula) no tabuleiro de Batalha Naval.
  * <p>
@@ -9,7 +11,6 @@
  *
  * @version 1.0
  */
-package iscteiul.ista.battleship;
 
 public interface IPosition {
 

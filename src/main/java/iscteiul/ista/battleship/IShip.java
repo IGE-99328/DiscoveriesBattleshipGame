@@ -1,3 +1,7 @@
+package iscteiul.ista.battleship;
+
+import java.util.List;
+
 /**
  * Interface que define o contrato para um navio no jogo de Batalha Naval.
  * <p>
@@ -11,10 +15,6 @@
  *
  * @version 1.0
  */
-package iscteiul.ista.battleship;
-
-import java.util.List;
-
 public interface  IShip {
 
     /**
