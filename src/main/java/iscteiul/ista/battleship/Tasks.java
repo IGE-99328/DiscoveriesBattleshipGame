@@ -1,3 +1,10 @@
+
+package iscteiul.ista.battleship;
+
+import java.util.Scanner;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 /**
  * Classe responsável pela execução e gestão das tarefas de jogo da Batalha Naval.
  * <p>
@@ -10,12 +17,6 @@
  *
  * @version 1.0
  */
-package iscteiul.ista.battleship;
-
-import java.util.Scanner;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 public class Tasks {
 
     /**
