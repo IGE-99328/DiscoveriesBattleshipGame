@@ -88,4 +88,5 @@ Simulamos um conflito no ficheiro README alterando a linha 79.
    Simulação de conflito
    ">>>>>>> 
 4. Optamos pela alteração "Simulação de conflito" e depois o merge foi bem sucedido.
+5. Voltei a simular para praticar mais uma vez. Estou agora a praticar um pull request.
 
