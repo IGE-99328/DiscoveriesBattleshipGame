@@ -14,7 +14,7 @@ import org.apache.logging.log4j.Logger;
  * de um {@link Logger}.
  * </p>
  * * @author IGE-122479
- *
+ * //teste de conflito de merge realizado
  * @version 1.0
  */
 public class Tasks {
