@@ -86,4 +86,6 @@ public enum Compass {
         }
         return bearing;
     }
+
+    /** estou só a praticar comandos*/
 }
